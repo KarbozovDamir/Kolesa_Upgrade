@@ -9,6 +9,21 @@ class SearchCest
 	
     public function checkToSearchQueryTest(FunctionalTester $I)
     {
+/**
+ * homework for lesson.5 Selectors and Locators by CSS and XPath
+ */
+		$SearchQueryTopCss = '#searchbox';
+		$SearchQueryTopXpath = '//form[@id="searchbox"]';
+
+		$CenterColumnCss = 'div.product-count';
+		$CenterColumnXpath = '//div[@class="product-count"]';
+
+		$CenterColumnCss = 'div.product-image-container';
+		$CenterColumnXpath = '//div[@class="product-image-container"]';
+
+
+
+// homework of lesson.4
         $I->amOnPage('/');
 		$I->fillField('#search_query_top', 'Printed dress');
 		$I->click('#searchbox > button');
