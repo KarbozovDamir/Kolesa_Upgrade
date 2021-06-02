@@ -15,13 +15,10 @@ class loginCest
     public function checkWrongLogin(AcceptanceTester $I)
     {
       $loginPage = new LoginPage($I);
-      $I -> amOnPage('');
-        $loginPage -> fillUsernameField()
-            -> fillPasswordField()
-            -> clickSubmit()
-            -> errorBoxDetect()
-            -> clickClose()
-            -> closeErrorBoxDetect();
-  
+      $I-> amOnPage(LoginPage::$URL);
+      $loginPage-> fillUsernameField()
+                -> fillPasswordField()
+                -> clickLoginButton()
+                -> clickErrorButton();
     }
 }
